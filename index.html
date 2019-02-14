@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./js/parallax.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('#loading').hide();  
+    });
+  </script>
+  <!-- <div id="loading" data-aos="zoom-in">
+    <img id="loading_image" src="./imgs/loading.gif" alt="Loading..." />
+  </div> -->
+
+  <header>
+   <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 float_container">
+        <div class="logo float_l">
+          <a href="./index.html"><img src="./imgs/logo.png" alt="멋쟁이사자처럼 로고"></a>
+        </div>
+        <nav class="navigation float_r">
+          <h2 class="readable-hidden">메인메뉴</h2>
+          <div class="menubar-container">
+            <button type="button" class="btn-menubar">메인메뉴 열기</button>
+            <span class="menubar menubar-top"></span>
+            <span class="menubar menubar-middle"></span>
+            <span class="menubar menubar-bottom"></span>
+          </div>
+          <ul class="main-menu navbar-right float_container">
+            <li class="nav-item"><a href="./about.html">ABOUT</a></li>
+            <li class="nav-item"><a href="./blog.html">BLOG</a></li>
+            <li class="nav-item"><a href="./portfolio.html">PORTFOLIO</a></li>
+            <li class="nav-item"><a href="./partners.html">PARTNERS</a></li>
+            <li class="nav-item"><a href="./donation.html">DONATION</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+   </div>
+  </header>
+  <main class="main_page">
+    <div class="landing_page">
+      <ul class="landing_imgs">
+        <li class="landing_img01 width_img">
+        </li>
+        <li class="landing_img02 width_img">
+        </li>
+        <li class="landing_img03 width_img">
+        </li>
+        <li class="landing_img04 width_img">
+        </li>
+        <li class="landing_img05 width_img">
+        </li>
+        <li class="landing_img06 width_img">
+        </li>
+        <li class="landing_img07 height_img">
+        </li>
+        <li class="landing_img08 height_img">
+        </li>
+        <li class="landing_img09 height_img">
+        </li>
+        <li class="landing_img10 height_img">
+        </li>
+        <li class="landing_img11 shape_img">
+        </li>
+        <li class="landing_img12 shape_img">
+        </li>
+        <li class="landing_img13 shape_img">
+        </li>
+        <li class="landing_img14 shape_img">
+        </li>
+        <li class="landing_img15 shape_img">
+        </li>
+        <li class="landing_img16 shape_img">
+        </li>
+      </ul>
+      <div class="container landing_page_content">
+        <div class="row text-center mid_section">
+          <div class="col-md-12 col-xs-12">
+            <h2 class="main_title" data-aos="fade-up" data-aos-delay="150">대한민국 최고의 IT인재풀<br><span>멋쟁이 사자처럼</span></h2>
+            <button href="#" class="btn_primary">파트너쉽 맺기</button>
+            <a href="#likelion_num" class="scroll-down">
+              <span class="fa fa-angle-down" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="likelion_num" class="container section">
+      <div class="text-center mx-auto">
+        <ul class="likelion_num row">
+          <li class="col-xs-12 col-md-3" data-aos="fade-up">
+            <h4>멋쟁이 사자처럼 학생</h4>
+            <div class="r_img_wrapper">
+              <img src="./imgs/main_ouput_01.png" alt="">
+            </div>
+            <p class="text-center">4319<span>명</span></p>
+          </li>
+          <li class="col-xs-12 col-md-3" data-aos="fade-up" data-aos-delay="150">
+            <h4>참여 대학</h4>
+            <div class="r_img_wrapper">
+              <img src="./imgs/main_ouput_02.png" alt="">
+            </div>
+            <p class="text-center">183<span>개</span></p>
+          </li>
+          <li class="col-xs-12 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <h4>만든 서비스</h4>
+            <div class="r_img_wrapper">
+              <img src="./imgs/main_ouput_03.png" alt="">
+            </div>
+            <p class="text-center">520<span>개</span></p>
+          </li>
+          <li class="col-xs-12 col-md-3" data-aos="fade-up" data-aos-delay="450">
+            <h4>파트너</h4>
+            <div class="r_img_wrapper">
+              <img src="./imgs/main_ouput_04.png" alt="">
+            </div>
+            <p class="text-center">30<span>명</span></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="">
+      <div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./imgs/main_company_bg.png" data-natural-width="1400" data-natural-height="900" style="height: 400px;">
+      </div>
+    </div> -->
+    <div id="main_company">
+      <div class="container section">
+        <div class="text-center mx-auto">
+          <div class="row">
+            <div class="col-md-6 col-xs-12 text-left" data-aos="fade-up">
+              <h3>멋쟁이 사자처럼<br>학생들이 들어간 회사</h3>
+              <div class="company_logos">
+                <ul class="float_container">
+                  <li><img src="./imgs/main_company_01.png" alt=""></li>
+                  <li><img src="./imgs/main_company_02.jpg" alt=""></li>
+                  <li><img src="./imgs/main_company_04.png" alt=""></li>
+                  <li><img src="./imgs/main_company_03.png" alt=""></li>
+                  <li><img src="./imgs/main_company_06.png" alt=""></li>
+                  <li><img src="./imgs/main_company_05.png" alt=""></li>
+                  <li><img src="./imgs/main_company_07.png" alt=""></li>
+                  <li><img src="./imgs/main_company_08.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <ul class="company_owner">
+                <li data-aos="fade-left" data-aos-delay="150">
+                  <img src="./imgs/main_company_03.png" alt="">
+                  <p>“멋사에서 합류한 인재들이 초기부터 오늘날에 이르기까지 제품 개발 및 조직에 큰 기여를 해주어서 샌드버드가 글로벌 제품으로 거듭날 수 있었다.”</p>
+                  <p class="text-right">샌드버드 CEO 김동신</p>
+                </li>
+                <li data-aos="fade-left" data-aos-delay="250">
+                  <img src="./imgs/main_company_07.png" alt="">
+                  <p>"선데이토즈의 큰 성장엔 멋쟁이 사자처럼 인재들이 함께였습니다. 멋쟁이 사자처럼
+                      졸업생들은 스타트업 업무에 최적화되어 있는 인재입니다."</p>
+                  <p class="text-right">선데이토즈 CTO 이창명</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container section">
+      <div class="text-center mx-auto">
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="float_l">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="#">
+                      <div class="blog_card">
+                        <div class="img_wrapper">
+                          <img class="" src="./imgs/main_blog_01.jpg" alt="First slide">
+                        </div>
+                        <div class="card_body text-left float_container">
+                          <h6>온실 속 화초를 야생으로</h6>
+                          <p>"멋쟁이사자처럼은 온실 속 화초 였던 저를 야생으로 내밀었습니다. 덕분에 학부의 이론 학습에 그치지 않고 실전 개발을 경험할 수 있었습니다. 활동 중 만들었던 ‘쥬시 대기시간 시뮬레이션 ...</p>
+                          <div class="profile float_r">
+                            <img src="" alt="">
+                            <p>한국거래소 KRX 박경록<br>(멋쟁이 사자처럼 4기)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="blog_card">
+                      <div class="img_wrapper">
+                        <img class="" src="./imgs/main_blog_01.jpg" alt="First slide">
+                      </div>
+                      <div class="card_body text-left float_container">
+                        <h6>온실 속 화초를 야생으로</h6>
+                        <p>"멋쟁이사자처럼은 온실 속 화초 였던 저를 야생으로 내밀었습니다. 덕분에 학부의 이론 학습에 그치지 않고 실전 개발을 경험할 수 있었습니다. 활동 중 만들었던 ‘쥬시 대기시간 시뮬레이션 ...</p>
+                        <div class="profile float_r">
+                          <img src="" alt="">
+                          <p>한국거래소 KRX 박경록<br>(멋쟁이 사자처럼 4기)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="blog_card">
+                      <div class="img_wrapper">
+                        <img class="" src="./imgs/main_blog_01.jpg" alt="First slide">
+                      </div>
+                      <div class="card_body text-left float_container">
+                        <h6>온실 속 화초를 야생으로</h6>
+                        <p>"멋쟁이사자처럼은 온실 속 화초 였던 저를 야생으로 내밀었습니다. 덕분에 학부의 이론 학습에 그치지 않고 실전 개발을 경험할 수 있었습니다. 활동 중 만들었던 ‘쥬시 대기시간 시뮬레이션 ...</p>
+                        <div class="profile float_r">
+                          <img src="" alt="">
+                          <p>한국거래소 KRX 박경록<br>(멋쟁이 사자처럼 4기)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev scroll-left" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next scroll-right" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                  <span class="fa fa-angle-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-left" data-aos="fade-up">
+            <div class="float_r">
+              <h3>멋쟁이 사자처럼의<br>블로그 이야기</h3>
+              <p>
+                실제 멋쟁이사자처럼 학생들의 이야기를 보며,<br>
+                멋쟁이 사자차럼의 활동에 대해 더 자세히 알 수 있습니다. 
+              </p>
+              <a href="./blog.html" class="btn_line l_mt">블로그 글 더보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="bg_active">
+      <div class="container b_section">
+        <div class="text-center mx-auto">
+          <h4>멋쟁이 사자처럼과 함께하기</h4>
+          <p class="m_font">파트너쉽 및 제휴 요청하기<span class="fa fa-angle-right" aria-hidden="true"></span></p>
+        </div>
+      </div>
+    </a>
+    <div class="container section">
+      <div class="text-center mx-auto startup">
+        <div class="row">
+          <div class="col-md-6 text-left" data-aos="fade-up">
+            <h3>멋쟁이 사자처럼<br>출신 스타트업</h3>
+            <a href="./portfolio.html" class="btn_line l_mt">포트폴리오 더보기</a>
+            <div class="float_l l_mt">
+              <h6 class="">스타트업 뉴스</h6>
+              <div id="carouselExampleControls" class="carousel slide s_mt" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="#">
+                      <div class="startup_news">
+                        <div class="float_container">
+                          <div class="float_l">
+                            <div class="img_wrapper">
+                              <img class="" src="./imgs/main_startup_01.jpg" alt="First slide">
+                            </div>
+                          </div>
+                          <div class="float_r card_body">
+                            <h6>비프로일레븐, 소프트뱅크벤처스 등으로부터 103억 규모 투자 유치</h6>
+                            <p>출처</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#">
+                      <div class="startup_news">
+                        <div class="float_container">
+                          <div class="float_l">
+                            <div class="img_wrapper">
+                              <img class="" src="./imgs/main_startup_01.jpg" alt="First slide">
+                            </div>
+                          </div>
+                          <div class="float_r card_body">
+                            <h6>비프로일레븐, 소프트뱅크벤처스 등으로부터 103억 규모 투자 유치</h6>
+                            <p>출처</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#">
+                      <div class="startup_news">
+                        <div class="float_container">
+                          <div class="float_l">
+                            <div class="img_wrapper">
+                              <img class="" src="./imgs/main_startup_01.jpg" alt="First slide">
+                            </div>
+                          </div>
+                          <div class="float_r card_body">
+                            <h6>비프로일레븐, 소프트뱅크벤처스 등으로부터 103억 규모 투자 유치</h6>
+                            <p>출처</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <a class="carousel-control-prev scroll-left" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next scroll-right" href="#carouselExampleControls" role="button" data-slide="next">
+                  <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                  <span class="fa fa-angle-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <ul class="float_r startup_list">
+              <li class="float_l">
+                <a href="#"><img src="./imgs/main_startup_01.jpg" alt=""></a>
+              </li>
+              <li class="float_l">
+                <a href="#"><img src="./imgs/main_startup_02.png" alt=""></a>
+              </li>
+              <li class="float_l">
+                <a href="#"><img src="./imgs/main_startup_03.jpg" alt=""></a>
+              </li>
+              <li class="float_l">
+                <a href="#"><img src="./imgs/main_startup_04.jpg" alt=""></a>
+              </li>
+              <li class="float_l">
+                <a href="#"><img src="./imgs/main_startup_05.jpg" alt=""></a>
+              </li>
+              <li class="float_l">
+                <a href="#"><img src="./imgs/main_startup_06.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="univ">
+      <div class="container section">
+        <div class="text-center mx-auto">
+          <div class="row">
+            <div class="col-md-4">
+              <h3>멋쟁이 사자처럼과<br>함께하는 대학교</h3>
+            </div>
+            <div class="col-md-8">
+              <ul class="univ_list float_container">
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+                <li>
+                  <img src="./imgs/main_univ_01.png" alt="">
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container float_container">
+      <div class="row">
+        <div class="col-md-6 introduce">
+          <ul class="float_container">
+            <li><a href="">멋쟁이 사자처럼 소개</a></li>
+            <li><a href="">페이스북 페이지</a></li>
+            <li><a href="">파트너쉽</a></li>
+            <li><a href="">블로그</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>사단법인 멋쟁이사자처럼</li>
+            <li>서울특별시 강남구 테헤란로 518 13층</li>
+            <li>대표: 이두희 | 대표메일: master@likelion.net</li>
+            <li class="xxs_font">COPYRIGHT 2019. 멋쟁이 사자처럼 (LIKE LION). ALL RIGHTS RESERVED.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+  <script>
+    AOS.init();
+    $('.carousel').carousel();
+    $(document).ready(function() {
+      // $('#carouselExampleControls').carousel({
+      //   interval: 2000
+      // })
+      $("#carouselExampleControls").on("touchstart", function(event){
+        var xClick = event.originalEvent.touches[0].pageX;
+        $(this).one("touchmove", function(event){
+            var xMove = event.originalEvent.touches[0].pageX;
+            if( Math.floor(xClick - xMove) > 5 ){
+                $(this).carousel('next');
+            }
+            else if( Math.floor(xClick - xMove) < -5 ){
+                $(this).carousel('prev');
+            }
+        });
+        $("#carouselExampleControls").on("touchend", function(){
+                $(this).off("touchmove");
+        });
+      });
+      $("#carouselExampleIndicators").on("touchstart", function(event){
+        var xClick = event.originalEvent.touches[0].pageX;
+        $(this).one("touchmove", function(event){
+            var xMove = event.originalEvent.touches[0].pageX;
+            if( Math.floor(xClick - xMove) > 5 ){
+                $(this).carousel('next');
+            }
+            else if( Math.floor(xClick - xMove) < -5 ){
+                $(this).carousel('prev');
+            }
+        });
+        $("#carouselExampleIndicators").on("touchend", function(){
+                $(this).off("touchmove");
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1524 @@
+// 색 
+$active : #FF9E1B
+$primary : #1a1a1a
+$secondary : #242424
+$light-gray : #dddddd
+$white : #ffffff
+$active-hover : #FF9300
+
+$box-shadow : 4px 6px 15px 0 rgba(0, 0, 0, 0.2)
+
+.bg_light
+  background: $secondary
+  opacity: 0.5
+
+.bg_active
+  background: $active
+
+// 폰트
+@import url('https://fonts.googleapis.com/css?family=Lato:300')
+
+@font-face 
+  font-family: 'SpoqaB'
+  font-style: normal
+  src: url('../fonts/SpoqaHanSansBold.ttf') format('truetype')
+@font-face 
+  font-family: 'SpoqaR'
+  font-style: normal
+  src: url('../fonts/SpoqaHanSansRegular.ttf') format('truetype')
+@font-face 
+  font-family: 'SpoqaL'
+  font-style: normal
+  src: url('../fonts/SpoqaHanSansLight.ttf') format('truetype')
+
+.lato
+  font-family: 'Lato', sans-serif !important
+.spoqab
+  font-family: 'SpoqaB', sans-serif !important
+  font-weight: 500
+.spoqar
+  font-family: 'SpoqaR', sans-serif !important
+  font-weight: 400
+.spoqal
+  font-family: 'SpoqaL', sans-serif !important
+  font-weight: 300
+
+$xl-font : 4.8rem
+$l-font : 3.8rem
+$m-font : 2.4rem
+$s-font : 1.8rem
+$xs-font : 1.6rem
+$xxs-font : 1.2rem
+
+.m_font
+  font-size: $m-font
+.xs_font
+  font-size: $xs-font
+.xxs_font
+  font-size: $xxs-font
+
+// 여백
+$xl-mg : 8.0rem
+$l-mg : 5.2rem
+$m-mg : 3.8rem
+$s-mg : 2.4rem
+
+.xl_mt
+  margin-top: $xl-mg
+.l_mt
+  margin-top: $l-mg
+.m_mt
+  margin-top: $m-mg
+.s_mt
+  margin-top: $s-mg
+
+// 버튼
+.btn_primary
+  background: $active
+  border: none
+  border-radius: none
+  color: $white
+  font-size: 20px
+  height: 54px
+  min-width: 250px
+  font-family: 'SpoqaR', sans-serif
+  box-shadow: $box-shadow
+
+.btn_primary:hover
+  transition: all 0.15s ease-in-out
+  transform: translateY(-10%)
+  background: $active-hover
+
+.btn_line
+  display: block
+  line-height: 50px
+  text-align: center
+  background: none
+  border: 2px solid $active
+  border-radius: none
+  color: $active
+  font-size: 20px
+  width: 250px
+  font-family: 'SpoqaR', sans-serif
+.btn_line:hover
+  color: $white
+  background: $active
+  text-decoration: none
+
+// 재사용 클래스
+.float_l
+  float: left
+
+.float_r
+  float: right
+
+.float_container::after
+  content: ''
+  display: block
+  clear: both
+
+.section
+  position: relative
+  padding: 12rem 2rem
+.mid_section
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  width: 100%
+a.bg_active
+  display: block
+  &:hover
+    background: $active-hover
+.b_section
+  min-height: 240px
+  position: relative
+  padding: 8rem 2rem
+  color: $primary
+  background-image: url("../imgs/about_bg.png")
+  background-size: 60%
+  background-repeat: no-repeat
+  background-position: right center
+  h4
+    font-weight: 400
+  p
+    position: absolute
+    right: 3rem
+    color: $white
+    font-weight: 400
+  span
+    margin: 0 $m-mg
+    font-size: 3.5rem
+    position: relative
+    top: 2px
+
+// 초기세팅
+
+h2
+  line-height: 1.6
+  text-align: center
+  word-break: keep-all
+h3
+  font-size: $xl-font
+  font-family: 'SpoqaL', sans-serif
+  font-weight: 300
+  text-align: left
+  line-height: 1.6
+  word-break: keep-all
+h3::after
+  content: ''
+  display: block
+  width: 50px
+  height: 2px
+  background: $light-gray
+  margin: $l-mg 0
+h3.text-center::after
+  margin: $l-mg auto
+h4, h5
+  font-size: $l-font
+  font-family: 'SpoqaL', sans-serif
+  font-weight: 300
+  text-align: left
+  word-break: keep-all
+h6
+  font-size: $s-font
+  font-family: 'SpoqaL', sans-serif
+  font-weight: 400
+  text-align: left
+  word-break: keep-all
+a
+  color: $white
+
+a:hover
+  color: $white
+  text-decoration: none
+  
+p
+  line-height: 1.8
+  text-align: left
+  font-size: $s-font
+  word-break: keep-all
+  margin-bottom: 0
+
+.carousel-indicators
+  bottom: 0
+.carousel-indicators .active
+  background-color: $active
+
+
+// css
+#loading 
+  width: 100%
+  height: 100vh 
+  top: 0px
+  left: 0px
+  bottom: 0px
+  right: 0
+  position: fixed 
+  display: block
+  background-color: #fff 
+  z-index: 10000
+  text-align: center 
+#loading_image
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+
+html
+  font-size: 10px
+body
+  background: $primary
+  font-family: 'SpoqaL', sans-serif
+  font-weight: 300
+  color: $light-gray
+
+.readable-hidden 
+  border: 0
+  clip: rect(0 0 0 0)
+  clip: rect(0, 0, 0, 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.parallax-container
+  height: 400px
+  width: 100%
+
+/* 헤더 */
+header 
+  background: $primary
+  width: 100%
+  height: 68px
+  line-height: 68px
+  position: fixed
+  top: 0
+  z-index: 1000
+  box-shadow: 0 2px 4px 0 rgba(26,26,26,0.5)
+
+/* 네비게이션 */
+.navigation a 
+  color: $white
+  text-decoration: none
+  font-size: $xs-font
+  font-family: 'Lato', sans-serif
+  padding: 1rem 0.5rem
+
+.btn-menubar 
+  background: transparent
+  border: 0
+  padding: 60px 0 0 0
+  margin: 0
+  width: 100%
+  height: 100%
+  cursor: pointer
+  outline-offset: 1px
+.menubar 
+  position: absolute
+  left: 0
+  width: 100%
+  height: 2px
+  background: $white
+  cursor: pointer
+  transition: all 0.2s ease-in-out
+.menubar-top 
+  top: 15px
+.menubar-act .menubar-top 
+  top: 50%
+  transform: rotate(45deg)
+.menubar-middle 
+  top: 50%
+  transform: translateY(-50%)
+.menubar-act .menubar-middle 
+  transform: translate(-100%, -50%)
+.menubar-bottom 
+  bottom: 15px
+.menubar-act .menubar-bottom
+  top: 50%
+  transform: rotate(-45deg)
+
+// 스크롤 애니메이션
+@keyframes scrollcolor 
+  0%  
+    color: $active
+    bottom: -50%
+  50%  
+    color: $white 
+  100%  
+    color: $active
+    bottom: -45%
+
+.scroll-left
+  font-size: 3.5rem
+  position: absolute
+  top: 50%
+  left: -20%
+  transform: translateY(-50%)
+  cursor: pointer
+  border-radius: 50%
+  width: 50px
+  height: 50px
+  line-height: 50px
+.scroll-right
+  font-size: 3.5rem
+  position: absolute
+  top: 50%
+  right: -20%
+  transform: translateY(-50%)
+  cursor: pointer
+  border-radius: 50%
+  width: 50px
+  height: 50px
+  line-height: 50px
+
+// main_page
+.main_page
+  width: 100%
+  overflow: hidden
+  .landing_page
+    position: relative
+    background-image: url(../imgs/main_company_bg.png)
+    background-size: cover
+    background-attachment: fixed
+    &::before 
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      // background: radial-gradient(#000 0%, $primary 60%)
+      background: $secondary
+      opacity: 0.9
+  .landing_page_content
+    min-height: 110vh
+    position: relative
+    // padding: 12rem 2rem
+    .main_title 
+      font-size: $xl-font
+      margin-bottom: $xl-mg
+      word-break: keep-all
+      span
+        position: relative
+      span::before
+        content: url("../imgs/title_img_left.png")
+        position: absolute
+        top: -20px
+        left: -$l-mg
+      span::after
+        content: url("../imgs/title_img_right.png")
+        position: absolute
+        top: -20px
+        right: -$l-mg
+
+  .landing_imgs
+    margin-bottom: 0
+    li
+      position: absolute
+      z-index: 1000
+      overflow: hidden
+      background-size: cover
+      background-position: center
+      -webkit-transition: all .25s
+      transition: all .25s
+      &.width_img, &.height_img
+        box-shadow: $box-shadow
+        filter: grayscale(100%)
+        over-flow: hidden
+      &.width_img:hover, &.height_img:hover
+        filter: none
+        transform: scale(1.4) translateY(-5%)
+        background-color: $active
+        background-blend-mode: multiply
+    li.shape_img
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: 1050
+    li.landing_img01
+      background-image: url("../imgs/landing_img01.jpg")
+      width: 12%
+      height: 12%
+      top: 0
+      left: 30%
+    li.landing_img02
+      background-image: url("../imgs/loading.gif")
+      width: 12%
+      height: 10%
+      top: 35%
+      left: 0
+    li.landing_img03
+      background-image: url("../imgs/landing_img03.JPG")
+      width: 12%
+      height: 12%
+      top: 50%
+      right: 0
+    li.landing_img04
+      background-image: url("../imgs/landing_img02.JPG")
+      width: 10%
+      height: 8%
+      top: 15%
+      left: 16%
+    li.landing_img05
+      background-image: url("../imgs/landing_img05.JPG")
+      width: 10%
+      height: 8%
+      top: 18%
+      right: 10%
+    li.landing_img06
+      background-image: url("../imgs/landing_img01.JPG")
+      width: 8%
+      height: 6%
+      bottom: 40%
+      left: 5%
+    li.landing_img07
+      background-image: url("../imgs/landing_img07.JPG")
+      width: 6%
+      height: 12%
+      top: 8%
+      left: 70%
+    li.landing_img08
+      background-image: url("../imgs/landing_img08.JPG")
+      width: 8%
+      height: 18%
+      bottom: 5%
+      left: 25%
+    li.landing_img09
+      background-image: url("../imgs/landing_img09.JPG")
+      width: 6%
+      height: 15%
+      top: 15%
+      right: 0
+    li.landing_img10
+      background-image: url("../imgs/test.gif")
+      width: 8%
+      height: 16%
+      bottom: 14%
+      right: 18%
+    li.landing_img11
+      background-image: url("../imgs/shape01.png")
+      width: 15%
+      height: 15%
+      top: 10%
+      left: 5%
+    li.landing_img12
+      background-image: url("../imgs/shape02.png")
+      width: 8%
+      height: 15%
+      top: 8%
+      right: 8%
+    li.landing_img13
+      background-image: url("../imgs/shape03.png")
+      width: 8%
+      height: 8%
+      bottom: 25%
+      left: 18%
+    li.landing_img14
+      background-image: url("../imgs/shape04.png")
+      width: 10%
+      height: 15%
+      top: 50%
+      left: 0
+    li.landing_img15
+      background-image: url("../imgs/shape05.png")
+      width: 5%
+      height: 5%
+      bottom: 15%
+      right: -10%
+    li.landing_img16
+      background-image: url("../imgs/shape06.png")
+      width: 15%
+      height: 20%
+      bottom: 25%
+      right: 5%
+
+  .likelion_num
+    h4
+      font-size: $m-font
+      text-align: center
+    p
+      font-family: 'Lato', sans-serif
+      font-size: 80px
+      color: $light-gray
+    span
+      font-size: $m-font
+  .r_img_wrapper
+    width: 200px
+    height: 200px
+    border: 2px solid $light-gray
+    border-radius: 50%
+    position: relative
+    margin: auto
+    margin-top: $m-mg
+    overflow: hidden
+    img
+      height: 80%
+      position: absolute
+      bottom: 5%
+      left: 50%
+      transform: translateX(-50%)
+  .likelion_num li:hover .r_img_wrapper
+    border: 2px solid $active
+    transform: translateY(-5%)
+    -webkit-transition: all .25s
+    transition: all .25s
+  .likelion_num li:hover p
+    color: $active
+
+  .company_logos
+    background: $white
+    max-width: 400px
+    padding: $s-mg
+    li
+      width: 50%
+      padding: $s-mg/2 $s-mg
+      float: left
+    img
+      width: 100%
+    li:last-child
+      width: 30%
+  .company_owner
+    height: 100%
+    li
+      margin: $l-mg $s-mg
+    img
+      width: 50%
+      display: block
+      text-align: left
+    p
+      font-size: $s-font
+      margin-top: $s-mg
+
+  #main_company
+    background-image: url('../imgs/main_company_bg.png')
+    background-size: cover
+    background-attachment: fixed
+    position: relative
+  #main_company::before
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0 
+    background: $secondary
+    opacity: 0.9
+  .blog_card
+    width: 100%
+    max-width: 400px
+    position: relative
+    top: -$s-mg
+    left: 50%
+    transform: translateX(-50%)
+    box-shadow: $box-shadow
+    .img_wrapper
+      position: relative
+      top: $s-mg
+      margin: 0 $s-mg
+      height: 0
+      padding-top: 50%
+      overflow: hidden
+      box-shadow: $box-shadow
+      img
+        width: 100%
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+    .card_body
+      background: $secondary
+      padding: $s-mg
+      h6
+        font-size: $m-font
+        margin-top: $s-mg
+      p
+        font-size: $xs-font
+        margin-top: $s-mg
+
+  .scroll-down
+    font-size: 3.5rem
+    position: absolute
+    left: 50%
+    bottom: -50%
+    transform: translateX(-50%)
+    cursor: pointer
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    line-height: 50px
+    animation: 0.6s ease-in-out infinite scrollcolor
+    animation-direction: alternate
+
+  .startup
+    .startup_list 
+      width: 420px
+      li
+        width: 180px
+        height: 180px
+        background: $white
+        margin: $s-mg/2
+        position: relative
+        overflow: hidden
+        border: 2px solid $light-gray
+        &:last-of-type img
+          display: block
+          padding: $s-mg/2
+          
+        img
+          width: 100%
+          -webkit-filter: grayscale(1) opacity(1)
+          filter: grayscale(1) opacity(1)
+          -webkit-transition: all .35s
+          transition: all .35s
+          position: absolute
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+        
+
+      li:hover 
+        box-shadow: $box-shadow
+        border: 2px solid $active
+        img
+          filter: none 
+  .startup_news
+    padding: $s-mg
+    background: $secondary
+    max-width: 400px
+    .img_wrapper
+      position: relative
+      height: 50px
+      width: 50px
+      overflow: hidden
+      box-shadow: $box-shadow
+      img
+        width: 100%
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+    .card_body
+      margin-left: $s-mg
+      width: calc(100% - 80px)
+  .univ
+    background: $white
+    color: $primary
+    position: relative
+    h3
+      z-index: 1000
+    .univ_list
+      width: 100%
+      &::before
+        content: ''
+        display: block
+        // position: fixed
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: $secondary
+        opacity: 0.5
+      li
+        width: 10%
+        padding: 5px
+        float: left
+        img
+          width: 100%
+
+// sub_page
+.subpage_main_bg
+  background-size: cover
+  background-attachment: fixed
+  background-position: right -80px
+  background-repeat: no-repeat
+  position: relative
+  height: 60vh
+.subpage_main_bg::before
+  content: ''
+  display: block
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0 
+  background: linear-gradient(to right, $primary 10%, rgba(26,26,26,0.8) 30%, rgba(26,26,26,0) 100%)
+.about_page .subpage_main_bg
+  background-image: url("../imgs/about_bg.png")
+  background-size: 50%
+  background-position: right 100px
+.blog_page .subpage_main_bg
+  background-image: url("../imgs/blog_bg.png")
+.portfolio_page .subpage_main_bg
+  background-image: url("../imgs/portfolio_bg.jpg")
+  background-position: right -180px
+  filter: grayscale(0.3)
+
+// about_page
+.about_page
+  h4::after
+    content: ''
+    display: block
+    width: 50px
+    height: 2px
+    background: $light-gray
+    margin: $l-mg 0
+  .about_main_img 
+    img
+      width: 65%
+  .about_intro
+    li
+      position: relative
+      padding: $xl-mg 0
+      &:first-of-type::before
+        content: url("../imgs/about_shape01.png")
+        position: absolute
+        left: 55%
+        top: 25%
+        z-index: 100
+      &:nth-of-type(2)::before
+        content: url("../imgs/about_shape02.png")
+        position: absolute
+        left: 40%
+        top: 25%
+        z-index: 100
+      &:nth-of-type(3)::before
+        content: url("../imgs/about_shape03.png")
+        position: absolute
+        left: 40%
+        top: 5%
+        z-index: 100
+      &:nth-of-type(4)::before
+        content: url("../imgs/about_shape04.png")
+        position: absolute
+        left: 55%
+        top: 0%
+        z-index: 100
+    .intro_content
+      margin-top: $xl-mg
+      width: 90%
+      z-index: 1000
+    .img_wrapper
+      width: 90%
+      overflow: hidden
+      position: relative
+      img
+        width: 100%
+  .likelion_news
+    background: $secondary
+    .rwd-video.is-16x9 
+      padding-bottom: 56.25%
+    .rwd-video iframe 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border: none
+    .scroll-left
+      left: -5%
+    .scroll-right
+      right: -5%
+  .newspaper_list
+    width: 90%
+    li
+      width: 190px
+      height: 190px
+      background: $light-gray
+      margin: $s-mg/2
+      overflow: hidden
+      text-align: center
+      padding: $s-mg/2
+      border: 2px solid $light-gray
+      img
+        width: 70%
+        -webkit-filter: grayscale(1) opacity(1)
+        filter: grayscale(1) opacity(1)
+        -webkit-transition: all .35s
+        transition: all .35s
+      p
+        color: $primary
+        font-size: 14px
+        font-weight: 400
+        text-align: center
+        margin-top: $s-mg
+    li:hover 
+      box-shadow: $box-shadow
+      border: 2px solid $active
+      img
+        -webkit-filter: none
+        filter: none
+  .likelion_award
+    .section
+      padding: 12rem 2rem 4rem
+    .award_list
+      li
+        height: 360px
+        background-size: cover
+        background-repeat: no-repeat
+        background-position-y: -80px
+        &:first-of-type
+          background-image: url("../imgs/about_award_01.jpg")
+        &:last-of-type
+          margin-top: 240px
+          background-image: url("../imgs/about_award_02.png")
+
+        .award_content
+          background: $primary
+          padding: $m-mg
+          position: relative
+          bottom: -240px
+          right: 0
+          box-shadow: $box-shadow
+
+
+// blog_page
+.blog_page
+  .main_blog
+    width: calc(100% - 30px)
+    // margin-left: 15px
+    height: 420px
+    background: $secondary
+    position: absolute
+    top: -120px
+    box-shadow: $box-shadow
+    .img_wrapper
+      width: 50%
+      height: 420px
+      position: relative
+      overflow: hidden
+      img
+        position: absolute
+        height: 100%
+    .card_body
+      width: 50%
+      padding: $l-mg
+      p
+        display: -webkit-box
+        overflow: hidden
+        text-overflow: ellipsis
+        -ms-line-clamp: 5
+        -webkit-line-clamp: 5
+        -ms-box-orient: vertical
+        -webkit-box-orient: vertical
+
+  .blog_list  
+    column-count: 2
+    column-gap: $l-mg
+    .blog_item
+      position: relative
+      border-top: 2px solid $light-gray
+      display: inline-block
+      margin-top: $xl-mg
+      padding-top: $s-mg
+      width: 100%
+      h6
+        font-size: $m-font
+      p
+        font-size: $xs-font
+      .profile
+        position: absolute
+        top: $s-mg
+        right: 0
+        img
+          width: 42px
+          height: 42px
+          border-radius: 50%
+          background: $secondary
+          margin-right: $s-mg/2
+      .img_wrapper
+        width: 100%
+        img
+          width: 100%
+
+// portfolio_page
+.portfolio_page
+  background: $white
+  .portfolio_wrapper
+    color: $primary
+    text-align: center
+    font-size: $m-font
+    font-weight: 400
+    input
+      position: absolute
+      opacity: 0
+    label
+      width: 50%
+      height: 100px
+      line-height: 100px
+      display: inline-block
+      border-left: 1px solid $light-gray
+      border-bottom: 1px solid $light-gray
+      position: absolute
+      background: $white
+      cursor: pointer
+    .portfolio_startup_label
+      top: -100px
+      left: 0
+    .portfolio_service_label
+      top: -100px
+      right: 0
+    .portfolio_list
+      display: none
+    input:checked ~label
+      color: $active
+      border-bottom: 3px solid $active
+    input:checked ~.portfolio_list
+      display: block
+  .portfolio_list
+    .portfolio_list_title
+      width: 100%
+      border-bottom: 1px solid $light-gray
+      li
+        padding: $s-mg
+    li.w_20
+      width: 20%
+    li.w_40
+      width: 40%
+    .portfolio_list_item
+      li
+        padding: $m-mg 0
+        border-bottom: 1px solid $light-gray
+      li:hover
+        border-bottom: 1px solid $active
+      a
+        font-size: $s-font
+        color: $primary
+      div, p
+        float: left
+        padding: $s-mg
+      div
+        width: 20%
+      p
+        width: 40%
+      img
+        width: 100%
+      
+
+// portfolio_detail
+.portfolio_detail_page
+  background: $white
+  color: $primary
+  font-weight: 400
+  .subpage_main_bg
+  .subpage_main_bg::before
+    display: none
+  .startup_title
+    margin: $l-mg 0
+    img
+      width: 60%
+  .startup_likelion
+    .profile_img
+      width: 42px
+      height: 42px
+      background: $secondary
+      border-radius: 50%
+  .morkup_img_wrapper
+    position: relative
+    img
+      position: absolute
+      width: 100%
+      top: -10%
+      z-index: 1000
+
+
+  .portfolio_content
+    border-top: 1px solid #999
+    padding-top: 120px
+  .detail_i_1
+    width: 60%
+  .detail_i_2
+    height: 480px
+    background-image: url("../imgs/main_blog_01.jpg")
+    background-attachment: fixed
+    background-size: cover
+    background-position: center
+  .detail_i_3
+    height: 480px
+    background-image: url("../imgs/main_blog_01.jpg")
+    background-size: cover
+    background-position: center
+  .detail_i_3
+    height: 480px
+    background-image: url("../imgs/main_blog_01.jpg")
+    background-size: cover
+    background-position: center
+  .detail_p_1
+    width: 80%
+    background: $white
+    padding: $xl-mg
+    position: relative
+    top: -120px
+    h5
+      font-size: $m-font
+      font-weight: 400
+    p
+      ont-size: $s-font
+      line-height: 2
+      margin-top: $s-mg
+  .detail_p_2
+    width: 80%
+    background: $white
+    padding: $xl-mg
+    position: relative
+    h5
+      font-size: $m-font
+      font-weight: 400
+    p
+      ont-size: $s-font
+      line-height: 2
+      margin-top: $s-mg
+
+// blog_detail
+.blog_detail_page
+  background: $white
+  color: $primary
+  font-weight: 400
+  .subpage_main_bg
+    background-image: url("../imgs/blog_detail_img.jpg")
+    background-position: center
+    filter: grayscale(60%)
+  .subpage_main_bg::before
+    display: none
+  .blog_title
+    width: 50%
+    position: absolute
+    bottom: -120px
+    left: 50%
+    transform: translateX(-50%)
+    background: $white
+    padding: 0 $xl-mg
+    h3
+      font-size: $l-font
+  .blog_content
+    // border-top: 1px solid $light-gray
+    .content_section
+      position: relative
+      padding: $s-mg $s-mg
+      margin: $s-mg auto
+      max-width: 80%
+    h5
+      font-size: $m-font
+      font-weight: 400
+    p
+      font-size: $s-font
+      line-height: 2
+      margin-top: $s-mg
+    img
+      width: 100%
+    .blog_full_img
+      background-image: url('../imgs/blog_detail_img.jpg')
+      background-attachment: fixed
+      background-size: cover
+      height: 480px
+  .more_blog
+    background: #f1f1f1
+    padding: $m-mg 2rem
+    li
+      .img_wrapper
+        width: 100%
+        height: 280px
+        position: relative
+        overflow: hidden
+        img
+          width: 100%
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+      p
+        color: $primary
+        margin-top: $s-mg
+
+//partners
+.partners_page
+  .subpage_main_bg
+    background-color: $primary
+    .section
+      padding: 8rem 2rem
+  .partners_main_img
+    img
+      width: 80%
+      margin-top: $m-mg
+  .partners_popup
+    position: absolute
+    background: $active
+    right: 5%
+    bottom: 0
+    transform: translateY(40%)
+    padding: 6rem 8rem
+    box-shadow: $box-shadow
+    p
+      color: $white
+      font-weight: 400
+      font-size: $m-font
+  .partners_advantage
+    width: 60%
+    height: 240px
+    position: absolute
+    top: -120px
+    left: 50%
+    transform: translateX(-50%)
+    background: $primary
+    h3
+      font-size: $l-font
+  .partners_advantage_list
+    &::before
+      content: ''
+      display: block
+      width: 1px
+      height: 130vh
+      background: $white
+      position: absolute
+      left: 50%
+    li
+      margin: 6rem 0
+      position: relative
+      &::after
+        font-size: $xl-font
+        color: $active
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background: $primary
+        border: 2px solid $active
+        border-radius: 50%
+        width: 80px
+        height: 80px
+        text-align: center
+        line-height: 80px
+      &:first-of-type::after
+        content: '1'
+      &:nth-of-type(2)::after
+        content: '2'
+      &:nth-of-type(3)::after
+        content: '3'
+      &:last-of-type::after
+        content: '4'
+      p
+        width: 80%
+        font-size: $l-font
+        background: $primary
+        padding: $m-mg 0
+      .img_wrapper
+        background: $secondary
+        position: relative
+        overflow: hidden
+        img
+          position: absolute
+          top: 50%
+          left: 50%
+          width: 100%
+          transform: translate(-50%, -50%)
+      &:first-of-type .img_wrapper
+        width: 50%
+        height: 70%
+        left: 30%
+      &:nth-of-type(2) .img_wrapper
+        width: 50%
+        height: 70%
+        left: 30%
+
+      &:nth-of-type(3) .img_wrapper
+        width: 50%
+        height: 70%
+        left: 30%
+
+      &:nth-of-type(4) .img_wrapper
+        width: 50%
+        height: 70%
+        left: 30%
+
+      
+  .business_program
+    background: $secondary
+    .section
+      padding: 12rem 2rem 4rem
+      
+    .business_program_list
+      ul
+        padding-bottom: 25rem
+        margin-bottom: 0
+        li
+          height: 360px
+          background-size: cover
+          background-repeat: no-repeat
+          background-position-y: -80px
+          margin-top: 240px
+          &:first-of-type
+            margin-top: 0
+            background-image: url("../imgs/about_award_01.jpg")
+          &:last-of-type
+            background-image: url("../imgs/about_award_02.png")
+          .business_content
+            width: 60%
+            background: $primary
+            padding: $m-mg
+            position: relative
+            bottom: -240px
+            right: 0
+            box-shadow: $box-shadow
+  .partner_join
+    margin-top: 6rem 0
+    background-image: url("../imgs/partner_join_img.jpg")
+    background-size: cover
+    background-position: center center
+    position: relative
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: $primary
+      opacity: 0.7
+    a
+      display: block
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      top: 70%
+
+
+// donation
+.donation_page
+  .subpage_main_bg
+    background: $white
+    color: $primary
+    font-weight: 400
+    &::before
+      display: none
+  .donation_list
+    margin-top: -2rem
+    li
+      width: calc( (100% - 75px) / 3 )
+      height: 60px
+      float: left
+      margin: $s-mg/2
+      position: relative
+      img
+        width: 90%
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+  .donation_sum
+    font-size: $l-font
+    margin-top: -4rem
+    span
+      font-size: 8rem
+      font-weight: 400
+      color: $active
+// footer
+footer
+  background: $secondary
+  font-size: $xs-font
+  line-height: 1.8
+  padding: $s-mg 0 $s-mg/2 0
+  border-top: 1px solid $light-gray
+  ul
+    li
+      // margin-top: $s-mg/2
+  .introduce
+    li
+      float: left
+      margin-right: $m-mg
+      a:hover
+        color: $active
+// 데스크탑
+@media screen and (min-width:768px)
+  .logo 
+    width: 15%
+  .logo img
+    width: 100%
+  .main-menu li
+    margin: 0 1.2rem
+    float: left
+  .menubar-container 
+    display: none
+
+/* 모바일 */
+@media screen and (max-width:767px)
+  html
+    font-size: 9px
+  main 
+    width: 100%
+  .menubar-container
+    z-index: 10000
+  .logo 
+    width: 30%
+  .logo img
+    width: 100%
+  .navigation a
+    font-size: $l-font
+  .menubar-container 
+    position: fixed
+    width: 40px
+    height: 60px
+    top: 5px
+    right: 5%
+    overflow: hidden
+  .main-menu 
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    z-index: 100
+    transform: translateX(100%)
+    text-align: center
+    transition: all 0.3s ease-in-out
+    padding-top: 30%
+  .menu-act
+    transform: translateX(0)
+    background-color: $active
+  .menu-act li
+    transform: translateX(0)
+  .main-menu li a
+    display: block
+  
+  .section
+    padding: 8rem 2rem
+
+  // main page
+  .main_page 
+    .landing_page
+      background-image: url(../imgs/main_company_bg.png)
+      background-size: cover
+      background-attachment: fixed
+      li
+        display: none
+    .landing_page::before 
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: $secondary
+      opacity: 0.9
+
+    .landing_page_content 
+      .main_title span::before,
+      .main_title span::after
+        top: -15px
+    .likelion_num
+      li
+        margin-top: $m-mg
+        .r_img_wrapper 
+          border: 2px solid $active
+        p
+          color: $active
+    .startup
+      .startup_list
+        width: 100%
+        li
+          width: calc(50% - 2.4rem)
+          height: calc(50% - 2.4rem)
+    .univ 
+      .univ_list 
+        li
+          width: 25%
+
+  // sub page
+  .subpage_main_bg
+    background-size: cover
+    background-attachment: fixed
+    background-position: right top
+    background-repeat: no-repeat
+    position: relative
+    height: 80vh
+  .about_page .subpage_main_bg
+    background-size: 100%
+    background-position: right center
+  .blog_page .subpage_main_bg
+    background-image: url("../imgs/blog_bg.png")
+  .portfolio_page .subpage_main_bg
+    background-image: url("../imgs/portfolio_bg.jpg")
+    background-position: center top
+    filter: grayscale(0.3)
+
+  // about
+  .about_page
+    .about_main_img
+      margin-top: $s-mg
+    .about_intro
+      margin-top: $xl-mg
+      li
+        padding: 4rem 0
+        &:nth-of-type(3)::before
+          z-index: 0
+    
+    .newspaper_list
+      width: 100%
+      li
+        width: calc(100% - 30px)
+        height: calc(50% - 2.4rem)
+        img
+          -webkit-filter: none
+          filter: none
+    .likelion_award .award_list li
+      background-size: cover
+      background-position: center
+  
+  // blog
+  .blog_page
+    .subpage_main_bg::before
+      opacity: 0.5
+    .main_blog
+      height: auto
+      left: 15px
+      .img_wrapper
+        width: 100%
+        height: 240px
+      .card_body
+        width: 100%
+        padding: $s-mg
+    .blog_list
+      // display: none
+      column-count: 1
+      margin-top: 24rem
+      .blog_item 
+        .profile
+          position: relative
+          padding-bottom: $s-mg
+          p
+            float: none
+  
+  // portfolio
+  .portfolio_page 
+    .portfolio_wrapper 
+      font-size: $s-font
+      label
+        font-size: $s-font
+        word-break: keep-all
+        padding: 3rem
+        line-height: 1.8
+      .portfolio_list
+        .portfolio_list_title li
+          padding: $s-mg 0
+        .portfolio_list_item div, p
+          font-size: $xs-font
+          padding: $s-mg $s-mg/2
+
+  // partners
+  .partners_page
+    .partners_main_img
+      display: none
+    .partners_popup
+      display: none
+    .partners_advantage
+      width: 100%
+    .partners_advantage_list 
+      &::before
+        display: none
+      li p
+        margin-top: $xl-mg
+        width: 100%
+    .business_program
+      .business_program_list 
+        li
+          background-size: cover
+          background-position: center
+          margin-top: 28rem
+          .business_content
+            width: 100%
+
+  // blog_detail
+  .blog_detail_page 
+    .blog_title
+      width: 100%
+    .blog_content 
+      .content_section
+        max-width: 100%
+        padding: 0
+    .more_blog 
+      li
+        p
+          margin-top: 0
+  
+  // portfolio_detail
+  .portfolio_detail_page 
+    .morkup_img_wrapper
+      display: none
+    .detail_i_1
+      width: 100%
+    .detail_p_1
+      width: 100%
+      top: 0
+      padding: 15px 0
+    .detail_p_2
+      width: 100%
+      padding: 15px 0
+
+  // donation
+  .donation_page
+    .subpage_main_bg
+      height: auto
+    .donation_list
+      margin-top: 2rem
