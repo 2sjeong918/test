@@ -1,0 +1,80 @@
+/* Common START */
+/* .pointer_cursor {
+    cursor: pointer;
+}
+
+.startup_logo {
+    width: 100px !important;
+}
+
+.font-bold {
+    font-weight: 800;
+}
+
+.font-black {
+    color: #1a1a1a;
+}
+
+.font-black:hover {
+    color: #FF9E1B;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.text-comment {
+    color: rgba(26, 26, 26, 0.5);
+} */
+
+/* Common END*/
+
+/* Main Page START */
+/*.startup_list li {*/
+/*display: flex;*/
+/*flex-direction: column;*/
+/*justify-content: center;*/
+/*}*/
+
+/* .startup_news .img_wrapper {
+  background-color: #ffffff;
+} */
+/* Main Page END*/
+
+/* About Page START */
+/* .award_list {
+    margin-bottom: 240px;
+} */
+.about_page .likelion_award .award_list .award_1 {
+  background-image: url("../imgs/about/awards/award1.jpg") !important;
+  background-position-y: -250px;
+}
+.about_page .likelion_award .award_list .award_2 {
+  margin-top: 240px;
+  background-image: url("../imgs/about/awards/award2.jpg") !important;
+}
+.about_page .likelion_award .award_list .award_3 {
+  margin-top: 240px;
+  background-image: url("../imgs/about/awards/award3.png") !important;
+}
+
+@media screen and (max-width:767px) {
+  .about_page .likelion_award .award_list .award_2,
+  .about_page .likelion_award .award_list .award_3{
+      margin-top: 320px;
+  }
+  .about_page .likelion_award .award_list .award_1 {
+    background-image: url("../imgs/about/awards/award1.jpg") !important;
+    background-position-y: 0;
+  }
+}
+/* About Page END*/
+
+/* Blog Detail Page START */
+/* Blog Detail Page END */
+
+/* Portfolio Detail Page START */
+/* .portfolio_content .detail_p_1 img {
+    width: 100%;
+} */
+/* Portfolio Detail Page END */

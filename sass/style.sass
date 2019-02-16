@@ -43,7 +43,7 @@ $box-shadow : 4px 6px 15px 0 rgba(0, 0, 0, 0.2)
   font-family: 'SpoqaL', sans-serif !important
   font-weight: 300
 
-$xl-font : 4.8rem
+$xl-font : 4.2rem
 $l-font : 3.8rem
 $m-font : 2.4rem
 $s-font : 1.8rem
@@ -71,6 +71,9 @@ $s-mg : 2.4rem
   margin-top: $m-mg
 .s_mt
   margin-top: $s-mg
+
+.xs_pd
+  padding: $s-mg/2
 
 // 버튼
 .btn_primary
@@ -159,10 +162,11 @@ h2
   word-break: keep-all
 h3
   font-size: $xl-font
+  // font-size: 4.2rem
   font-family: 'SpoqaL', sans-serif
-  font-weight: 300
   text-align: left
-  line-height: 1.6
+  font-weight: 600
+  line-height: 1.5
   word-break: keep-all
 h3::after
   content: ''
@@ -170,17 +174,27 @@ h3::after
   width: 50px
   height: 2px
   background: $light-gray
-  margin: $l-mg 0
+  margin: 4.2rem 0 $l-mg
 h3.text-center::after
   margin: $l-mg auto
-h4, h5
+h4
   font-size: $l-font
   font-family: 'SpoqaL', sans-serif
+  font-weight: 500
+  // line-height: 0.2
+  text-align: left
+  word-break: keep-all
+  
+h5
+  font-size: 3.6rem
+  font-family: 'SpoqaL', sans-serif
   font-weight: 300
+  line-height: 1.4
   text-align: left
   word-break: keep-all
 h6
   font-size: $s-font
+  line-height: 1.4
   font-family: 'SpoqaL', sans-serif
   font-weight: 400
   text-align: left
@@ -225,7 +239,7 @@ p
   width: 100%
 
 html
-  font-size: 10px
+  font-size: 9px
 body
   background: $primary
   font-family: 'SpoqaL', sans-serif
@@ -247,6 +261,77 @@ body
   height: 400px
   width: 100%
 
+// 모달
+.modal-dialog
+  max-width: 620px
+.modal-content 
+  position: relative
+  width: 100%
+  margin: $m-mg
+  padding: $m-mg
+  pointer-events: auto
+  background-color: $primary
+  border: 1px solid $active
+  border-radius: 0
+  .modal-header 
+    border-bottom: 1px solid $active
+    padding: 1rem 0
+    h5 
+      font-size: $m-font
+      font-weight: 400
+    button.close 
+      position: absolute
+      right: 4.2rem
+      top: $l-mg
+      ion-icon
+        color: $light-gray
+        font-size: $m-font
+  .modal-body 
+    position: relative
+    padding: 0
+    margin-top: $m-mg
+    label
+      font-size: $s-font
+      width: 80px
+    input, textarea
+      width: 100%
+      // float: right
+      border: 1px solid #999999
+      border-radius: 2px
+      background: none
+      height: 42px
+      font-size: $s-font
+      padding: $s-mg/2
+      margin: $s-mg/2 0
+      color: $light-gray
+    textarea
+      height: auto
+    input:focus
+      border: 1px solid $active
+  .modal-footer
+    border-top: none
+    padding: 0
+    button 
+      box-shadow: $box-shadow
+      margin-top: $s-mg
+      width: 100%
+      color: $white
+      background: $active
+      border: none
+      border-radius: 0
+      height: 62px
+      font-size: $m-font
+      font-weight: 400
+      &:hover
+        background: $active-hover
+        transition: all 0.15s ease-in-out
+        transform: translateY(-10%)
+    button.close_btn 
+      background: none
+      border: 1px solid $active
+            
+        
+    
 /* 헤더 */
 header 
   background: $primary
@@ -255,7 +340,7 @@ header
   line-height: 68px
   position: fixed
   top: 0
-  z-index: 1000
+  z-index: 900
   box-shadow: 0 2px 4px 0 rgba(26,26,26,0.5)
 
 /* 네비게이션 */
@@ -265,6 +350,8 @@ header
   font-size: $xs-font
   font-family: 'Lato', sans-serif
   padding: 1rem 0.5rem
+  &:hover
+    color: $active
 
 .btn-menubar 
   background: transparent
@@ -339,7 +426,7 @@ header
   overflow: hidden
   .landing_page
     position: relative
-    background-image: url(../imgs/main_company_bg.png)
+    background-image: url(../imgs/main_landing_bg.png)
     background-size: cover
     background-attachment: fixed
     &::before 
@@ -358,7 +445,7 @@ header
     position: relative
     // padding: 12rem 2rem
     .main_title 
-      font-size: $xl-font
+      font-size: 4.8rem
       margin-bottom: $xl-mg
       word-break: keep-all
       span
@@ -366,19 +453,19 @@ header
       span::before
         content: url("../imgs/title_img_left.png")
         position: absolute
-        top: -20px
+        top: -10px
         left: -$l-mg
       span::after
         content: url("../imgs/title_img_right.png")
         position: absolute
-        top: -20px
+        top: -10px
         right: -$l-mg
 
   .landing_imgs
     margin-bottom: 0
     li
       position: absolute
-      z-index: 1000
+      z-index: 950
       overflow: hidden
       background-size: cover
       background-position: center
@@ -396,7 +483,7 @@ header
     li.shape_img
       background-size: contain
       background-repeat: no-repeat
-      z-index: 1050
+      z-index: 950
     li.landing_img01
       background-image: url("../imgs/landing_img01.jpg")
       width: 12%
@@ -428,10 +515,10 @@ header
       top: 18%
       right: 10%
     li.landing_img06
-      background-image: url("../imgs/landing_img01.JPG")
+      background-image: url("../imgs/landing_img04.JPG")
       width: 8%
-      height: 6%
-      bottom: 40%
+      height: 8%
+      bottom: 35%
       left: 5%
     li.landing_img07
       background-image: url("../imgs/landing_img07.JPG")
@@ -452,8 +539,8 @@ header
       top: 15%
       right: 0
     li.landing_img10
-      background-image: url("../imgs/test.gif")
-      width: 8%
+      background-image: url("../imgs/loading.gif")
+      width: 10%
       height: 16%
       bottom: 14%
       right: 18%
@@ -552,7 +639,7 @@ header
       margin-top: $s-mg
 
   #main_company
-    background-image: url('../imgs/main_company_bg.png')
+    background-image: url('../imgs/main_company_bg.jpg')
     background-size: cover
     background-attachment: fixed
     position: relative
@@ -565,7 +652,7 @@ header
     left: 0
     right: 0 
     background: $secondary
-    opacity: 0.9
+    opacity: 0.8
   .blog_card
     width: 100%
     max-width: 400px
@@ -597,6 +684,22 @@ header
       p
         font-size: $xs-font
         margin-top: $s-mg
+      .img_wrapper
+        width: 42px
+        height: 42px
+        position: relative
+        overflow: hidden
+        border-radius: 50%
+        margin-top: 5px
+        margin-right: $s-mg/2
+        padding: 0
+        img
+          width: auto
+          height: 100%
+          position: absolute
+          top: 0
+          left: 50%
+          transform: translateX(-50%)
 
   .scroll-down
     font-size: 3.5rem
@@ -623,10 +726,6 @@ header
         position: relative
         overflow: hidden
         border: 2px solid $light-gray
-        &:last-of-type img
-          display: block
-          padding: $s-mg/2
-          
         img
           width: 100%
           -webkit-filter: grayscale(1) opacity(1)
@@ -648,6 +747,7 @@ header
     padding: $s-mg
     background: $secondary
     max-width: 400px
+    min-height: 120px
     .img_wrapper
       position: relative
       height: 50px
@@ -668,7 +768,7 @@ header
     color: $primary
     position: relative
     h3
-      z-index: 1000
+      z-index: 900
     .univ_list
       width: 100%
       &::before
@@ -696,6 +796,8 @@ header
   background-repeat: no-repeat
   position: relative
   height: 60vh
+  p
+    font-size: 2rem
 .subpage_main_bg::before
   content: ''
   display: block
@@ -724,14 +826,21 @@ header
     width: 50px
     height: 2px
     background: $light-gray
+    margin: $l-mg auto
+  h5::after
+    content: ''
+    display: block
+    width: 50px
+    height: 2px
+    background: $light-gray
     margin: $l-mg 0
   .about_main_img 
     img
-      width: 65%
+      width: 60%
   .about_intro
     li
       position: relative
-      padding: $xl-mg 0
+      padding: 6rem 0
       &:first-of-type::before
         content: url("../imgs/about_shape01.png")
         position: absolute
@@ -742,13 +851,13 @@ header
         content: url("../imgs/about_shape02.png")
         position: absolute
         left: 40%
-        top: 25%
+        top: 30%
         z-index: 100
       &:nth-of-type(3)::before
         content: url("../imgs/about_shape03.png")
         position: absolute
-        left: 40%
-        top: 5%
+        left: 50%
+        top: 10%
         z-index: 100
       &:nth-of-type(4)::before
         content: url("../imgs/about_shape04.png")
@@ -759,7 +868,7 @@ header
     .intro_content
       margin-top: $xl-mg
       width: 90%
-      z-index: 1000
+      z-index: 900
     .img_wrapper
       width: 90%
       overflow: hidden
@@ -814,24 +923,28 @@ header
     .section
       padding: 12rem 2rem 4rem
     .award_list
-      li
-        height: 360px
-        background-size: cover
-        background-repeat: no-repeat
-        background-position-y: -80px
-        &:first-of-type
-          background-image: url("../imgs/about_award_01.jpg")
-        &:last-of-type
+      ul
+        padding-bottom: 25rem
+        li
+          height: 360px
+          background-size: cover
+          background-repeat: no-repeat
+          background-position-y: -80px
           margin-top: 240px
-          background-image: url("../imgs/about_award_02.png")
+          &:first-of-type
+            margin-top: 0
+            background-image: url("../imgs/about_award_01.jpg")
+          &:last-of-type
+            background-image: url("../imgs/about_award_02.png")
 
-        .award_content
-          background: $primary
-          padding: $m-mg
-          position: relative
-          bottom: -240px
-          right: 0
-          box-shadow: $box-shadow
+          .award_content
+            background: $primary
+            padding: $m-mg
+            width: 60%
+            position: relative
+            bottom: -240px
+            right: 0
+            box-shadow: $box-shadow
 
 
 // blog_page
@@ -839,22 +952,24 @@ header
   .main_blog
     width: calc(100% - 30px)
     // margin-left: 15px
-    height: 420px
+    height: 380px
     background: $secondary
     position: absolute
     top: -120px
     box-shadow: $box-shadow
     .img_wrapper
       width: 50%
-      height: 420px
+      height: 380px
       position: relative
       overflow: hidden
       img
         position: absolute
-        height: 100%
+        height: 105%
     .card_body
       width: 50%
       padding: $l-mg
+      height: 380px
+      position: relative
       p
         display: -webkit-box
         overflow: hidden
@@ -863,6 +978,26 @@ header
         -webkit-line-clamp: 5
         -ms-box-orient: vertical
         -webkit-box-orient: vertical
+      .profile
+        position: absolute
+        right: $l-mg
+        bottom: $l-mg
+        .img_wrapper
+          width: 42px
+          height: 42px
+          position: relative
+          overflow: hidden
+          border-radius: 50%
+          margin: 10px
+          img
+            width: auto
+            height: 100%
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+          p
+          font-size: $xs-font
+
 
   .blog_list  
     column-count: 2
@@ -872,22 +1007,40 @@ header
       border-top: 2px solid $light-gray
       display: inline-block
       margin-top: $xl-mg
-      padding-top: $s-mg
+      padding-top: 2.8rem
       width: 100%
-      h6
-        font-size: $m-font
-      p
-        font-size: $xs-font
-      .profile
-        position: absolute
-        top: $s-mg
-        right: 0
-        img
-          width: 42px
-          height: 42px
-          border-radius: 50%
-          background: $secondary
-          margin-right: $s-mg/2
+      .card_body
+        position: relative
+        h6
+          font-size: $m-font
+          max-width: 60%
+          display: -webkit-box
+          overflow: hidden
+          text-overflow: ellipsis
+          -ms-line-clamp: 2
+          -webkit-line-clamp: 2
+          -ms-box-orient: vertical
+          -webkit-box-orient: vertical
+        .profile
+          position: absolute
+          right: 0
+          top: 0
+          .img_wrapper
+            width: 42px
+            height: 42px
+            position: relative
+            overflow: hidden
+            border-radius: 50%
+            margin-top: 5px
+            margin-right: $s-mg/2
+            img
+              width: auto
+              height: 100%
+              position: absolute
+              left: 50%
+              transform: translateX(-50%)
+          p
+            font-size: $xs-font
       .img_wrapper
         width: 100%
         img
@@ -914,6 +1067,7 @@ header
       position: absolute
       background: $white
       cursor: pointer
+      font-weight: 600
     .portfolio_startup_label
       top: -100px
       left: 0
@@ -932,29 +1086,63 @@ header
       width: 100%
       border-bottom: 1px solid $light-gray
       li
-        padding: $s-mg
+        font-size: $m-font
+        font-weight: 600
+        padding: 1.8rem
     li.w_20
       width: 20%
     li.w_40
       width: 40%
     .portfolio_list_item
       li
-        padding: $m-mg 0
+        padding: 0.6rem 0
         border-bottom: 1px solid $light-gray
+        min-height: 180px
+        position: relative
       li:hover
         border-bottom: 1px solid $active
       a
         font-size: $s-font
         color: $primary
-      div, p
-        float: left
+      .img_wrapper
         padding: $s-mg
-      div
         width: 20%
-      p
-        width: 40%
-      img
-        width: 100%
+        float: left
+        position: relative
+        min-height: 180px
+        img
+          width: 60%
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+      .img_wrapper_R
+        padding: $s-mg
+        width: 20%
+        float: left
+        position: relative
+        min-height: 180px
+        img
+          width: 50%
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+      
+      .content
+        width: 80%
+        position: absolute
+        margin-left: 20%
+        top: 50%
+        transform: translateY(-50%)
+        p
+          padding: $s-mg
+          width: 50%
+          float: left
+        div
+          padding: $s-mg
+          width: 25%
+          float: left
       
 
 // portfolio_detail
@@ -962,6 +1150,8 @@ header
   background: $white
   color: $primary
   font-weight: 400
+  .section
+    padding: 12rem 2rem 6rem
   .subpage_main_bg
   .subpage_main_bg::before
     display: none
@@ -971,17 +1161,34 @@ header
       width: 60%
   .startup_likelion
     .profile_img
-      width: 42px
-      height: 42px
-      background: $secondary
-      border-radius: 50%
+      position: relative
+      right: 0
+      top: 0
+      li
+        margin-top: $s-mg/2
+      .img_wrapper
+        width: 42px
+        height: 42px
+        background: $primary
+        position: relative
+        overflow: hidden
+        border-radius: 50%
+        margin-right: $s-mg/2
+        img
+          width: auto
+          height: 100%
+          position: absolute
+          left: 50%
+          transform: translateX(-50%)
+      p
+        font-size: $xs-font
+        line-height: 42px
   .morkup_img_wrapper
     position: relative
     img
       position: absolute
       width: 100%
       top: -10%
-      z-index: 1000
 
 
   .portfolio_content
@@ -1097,22 +1304,30 @@ header
     background-color: $primary
     .section
       padding: 8rem 2rem
+    .partner_btn
+      position: absolute
+      left: 60%
+      top: 60%
   .partners_main_img
     img
       width: 80%
       margin-top: $m-mg
-  .partners_popup
-    position: absolute
-    background: $active
-    right: 5%
-    bottom: 0
-    transform: translateY(40%)
-    padding: 6rem 8rem
-    box-shadow: $box-shadow
-    p
-      color: $white
-      font-weight: 400
-      font-size: $m-font
+  // .partners_popup
+  //   position: absolute
+  //   background: $active
+  //   right: 5%
+  //   bottom: 0
+  //   transform: translateY(40%)
+  //   padding: 6rem 8rem
+  //   box-shadow: $box-shadow
+  //   &:hover
+  //     background: $active-hover
+  //     transition: all 0.15s ease-in-out
+  //     transform: translateY(35%)
+  //   p
+  //     color: $white
+  //     font-weight: 400
+  //     font-size: $m-font
   .partners_advantage
     width: 60%
     height: 240px
@@ -1127,16 +1342,17 @@ header
     &::before
       content: ''
       display: block
-      width: 1px
-      height: 130vh
-      background: $white
+      width: 2px
+      height: 65%
+      background: #4b4b4b
       position: absolute
       left: 50%
     li
       margin: 6rem 0
       position: relative
       &::after
-        font-size: $xl-font
+        font-size: $l-font
+        font-weight: 700
         color: $active
         position: absolute
         top: 0
@@ -1145,10 +1361,10 @@ header
         background: $primary
         border: 2px solid $active
         border-radius: 50%
-        width: 80px
-        height: 80px
+        width: 72px
+        height: 72px
         text-align: center
-        line-height: 80px
+        line-height: 72px
       &:first-of-type::after
         content: '1'
       &:nth-of-type(2)::after
@@ -1158,38 +1374,39 @@ header
       &:last-of-type::after
         content: '4'
       p
-        width: 80%
-        font-size: $l-font
+        font-size: $m-font
         background: $primary
-        padding: $m-mg 0
-      .img_wrapper
-        background: $secondary
+        margin: $l-mg
+        width: 35%
+      .img_bg
+        // background: $secondary
         position: relative
         overflow: hidden
-        img
-          position: absolute
-          top: 50%
-          left: 50%
-          width: 100%
-          transform: translate(-50%, -50%)
-      &:first-of-type .img_wrapper
-        width: 50%
-        height: 70%
-        left: 30%
-      &:nth-of-type(2) .img_wrapper
-        width: 50%
-        height: 70%
-        left: 30%
+        background-size: cover
+        background-position: center
+      &:first-of-type .img_bg
+        width: 250px
+        height: 200px
+        top: -10%
+        left: 10%
+        background-image: url("../imgs/about_intro01.png")
+      &:nth-of-type(2) .img_bg
+        width: 300px
+        height: 250px
+        right: 10%
+        background-image: url("../imgs/about_intro02.png")
 
-      &:nth-of-type(3) .img_wrapper
-        width: 50%
-        height: 70%
-        left: 30%
+      &:nth-of-type(3) .img_bg
+        width: 250px
+        height: 300px
+        left: 10%
+        background-image: url("../imgs/about_intro03.png")
 
-      &:nth-of-type(4) .img_wrapper
-        width: 50%
-        height: 70%
-        left: 30%
+      &:nth-of-type(4) .img_bg
+        width: 350px
+        height: 250px
+        right: 10%
+        background-image: url("../imgs/about_intro04.png")
 
       
   .business_program
@@ -1221,7 +1438,7 @@ header
             right: 0
             box-shadow: $box-shadow
   .partner_join
-    margin-top: 6rem 0
+    min-height: 45vh
     background-image: url("../imgs/partner_join_img.jpg")
     background-size: cover
     background-position: center center
@@ -1236,6 +1453,7 @@ header
       right: 0
       background: $primary
       opacity: 0.7
+      
     a
       display: block
       position: absolute
@@ -1288,6 +1506,9 @@ footer
       margin-right: $m-mg
       a:hover
         color: $active
+
+// 와이드
+
 // 데스크탑
 @media screen and (min-width:768px)
   .logo 
@@ -1299,6 +1520,25 @@ footer
     float: left
   .menubar-container 
     display: none
+
+// 태블렛
+@media (min-width:768px) and (max-width:991px)
+  .blog_page
+    .main_blog
+      height: 360px
+      .img_wrapper
+        height: 360px
+      .card_body
+        padding: $s-mg
+        height: 360px
+        h5
+          font-size: 3.2rem
+        .profile
+          position: absolute
+          right: $s-mg
+          bottom: $s-mg
+    .blog_list
+      column-count: 1
 
 /* 모바일 */
 @media screen and (max-width:767px)
@@ -1314,6 +1554,8 @@ footer
     width: 100%
   .navigation a
     font-size: $l-font
+    &:hover
+      color: $white
   .menubar-container 
     position: fixed
     width: 40px
@@ -1347,7 +1589,7 @@ footer
   // main page
   .main_page 
     .landing_page
-      background-image: url(../imgs/main_company_bg.png)
+      background-image: url(../imgs/main_landing_bg.png)
       background-size: cover
       background-attachment: fixed
       li
@@ -1374,12 +1616,15 @@ footer
           border: 2px solid $active
         p
           color: $active
+    .main_blog_img
+      margin-top: $l-mg
     .startup
       .startup_list
         width: 100%
+        margin-top: $s-mg
         li
-          width: calc(50% - 2.4rem)
-          height: calc(50% - 2.4rem)
+          width: 140px
+          height: 140px
     .univ 
       .univ_list 
         li
@@ -1413,6 +1658,8 @@ footer
         padding: 4rem 0
         &:nth-of-type(3)::before
           z-index: 0
+      .intro_content
+        width: 100%
     
     .newspaper_list
       width: 100%
@@ -1422,9 +1669,16 @@ footer
         img
           -webkit-filter: none
           filter: none
-    .likelion_award .award_list li
-      background-size: cover
-      background-position: center
+    .likelion_award 
+      .award_list 
+        ul
+          li
+            background-size: cover
+            background-position: center
+            .award_content
+              width: 100%
+              h5::after
+                margin: $s-mg 0
   
   // blog
   .blog_page
@@ -1436,19 +1690,27 @@ footer
       .img_wrapper
         width: 100%
         height: 240px
+        img
+          width: 100%
+          height: auto
       .card_body
         width: 100%
         padding: $s-mg
+        .profile
+          right: $s-mg
+          bottom: $s-mg
+
     .blog_list
       // display: none
       column-count: 1
-      margin-top: 24rem
+      margin-top: 30rem
       .blog_item 
-        .profile
-          position: relative
-          padding-bottom: $s-mg
-          p
-            float: none
+        .card_body
+          .profile
+            position: relative
+            padding: $s-mg 0
+            p
+              float: none
   
   // portfolio
   .portfolio_page 
@@ -1460,14 +1722,72 @@ footer
         padding: 3rem
         line-height: 1.8
       .portfolio_list
-        .portfolio_list_title li
-          padding: $s-mg 0
-        .portfolio_list_item div, p
-          font-size: $xs-font
-          padding: $s-mg $s-mg/2
+        .portfolio_list_title
+          display: none
+        .portfolio_list_item
+          li
+            padding: 0.6rem 0
+            border-bottom: 1px solid $light-gray
+            &:first-of-type
+              border-top: 1px solid $light-gray
+          li:hover
+            border-bottom: 1px solid $active
+          a
+            font-size: $s-font
+            color: $primary
+          .img_wrapper
+            padding: $s-mg $s-mg/2
+            width: 100%
+            float: left
+            text-align: left
+            min-height: auto
+            img
+              width: 40%
+              position: relative
+              left: 0
+              transform: translate(0,0)
+          .img_wrapper_R
+            padding: $s-mg $s-mg/2
+            width: 100%
+            float: left
+            text-align: left
+            min-height: auto
+            img
+              width: 30%
+              position: relative
+              left: 0
+              transform: translate(0,0)
+          .content
+            width: 100%
+            position: relative
+            margin-left: 0
+            transform: translateY(0)
+            p
+              padding: $s-mg/2
+              width: 100%
+              float: left
+            div
+              padding: $s-mg/2
+              float: left
+              text-align: left
+              &:first-of-type
+                width: 60%
+              &:last-of-type
+                width: 40%
 
   // partners
   .partners_page
+    .subpage_main_bg
+      .partner_btn
+        position: fixed
+        width: 100%
+        left: 50%
+        bottom: 0
+        top: auto
+        transform: translateX(-50%)
+        background: $active
+        color: $white
+        z-index: 1000
     .partners_main_img
       display: none
     .partners_popup
@@ -1477,17 +1797,27 @@ footer
     .partners_advantage_list 
       &::before
         display: none
-      li p
-        margin-top: $xl-mg
-        width: 100%
+      li 
+        p
+          margin: $xl-mg+$m-mg 0 $xl-mg/2
+          width: 100%
+        &:first-of-type .img_bg,
+        &:nth-of-type(2) .img_bg,
+        &:nth-of-type(3) .img_bg,
+        &:nth-of-type(4) .img_bg 
+          width: 100%
+          top: 0
+          left: 0
+
     .business_program
       .business_program_list 
-        li
-          background-size: cover
-          background-position: center
-          margin-top: 28rem
-          .business_content
-            width: 100%
+        ul
+          li
+            background-size: cover
+            background-position: center
+            margin-top: 28rem
+            .business_content
+              width: 100%
 
   // blog_detail
   .blog_detail_page 
@@ -1515,6 +1845,8 @@ footer
     .detail_p_2
       width: 100%
       padding: 15px 0
+    .partner_join
+      margin-top: $xl-mg
 
   // donation
   .donation_page
@@ -1522,3 +1854,7 @@ footer
       height: auto
     .donation_list
       margin-top: 2rem
+
+  // modal
+  .modal-content
+    margin: 0

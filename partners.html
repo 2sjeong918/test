@@ -17,6 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="./js/parallax.min.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -55,19 +56,11 @@
             <h3>멋쟁이사자처럼 인재풀과
               함께하는 방법, 파트너쉽</h3>
             <p>멋쟁이사자처럼은 비영리단체로 여러 기업들의 후원을 받아 운영됩니다. 
-              후원을 해주시는 기업들은 멋쟁이사자처럼과 파트너쉽을 맺어 멋쟁이사자처럼 인재풀과 함께할 수 있습니다.</p>
+              후원을 해주시는 기업들은 멋쟁이사자처럼과 파트너쉽을 맺어 멋쟁이사자처럼 인재풀과 함께할 수 있습니다.
+            </p>
           </div>
-          <div class="col-md-6">
-            <div class="partners_main_img" data-aos="fade-up">
-              <img class="float_r" src="./imgs/partners_main_img.png" alt="">
-            </div>
-          </div>
+          <a href="#" class="partner_btn btn_line" data-toggle="modal" data-target="#exampleModalCenter">파트너쉽 맺으러 가기</a>
         </div>
-        <a href="#">
-          <div class="partners_popup">
-            <p>멋쟁이 사자처럼과<br>파트너쉽 맺으러 가기</p>
-          </div>
-        </a>
       </div>
     </div>
     <div class="">
@@ -80,49 +73,42 @@
       </div>
       <ul class="partners_advantage_list">
         <li class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="img_wrapper"></div>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <p class="float_r">
+          <div class="col-xs-12 col-md-12 float_container">
+            <p class="float_r" data-aos="fade-up" data-aos-delay="150">
               멋쟁이 사자처럼 
               채용 연계 프로그램 참여
             </p>
+            <div class="img_bg float_l" data-aos="fade-up">
+            </div>
           </div>
         </li>
         <li class="row">
-          <div class="col-xs-12 col-md-6">
-            <p class="float_l">
+          <div class="col-xs-12 col-md-12 float_container">
+            <p class="float_l" data-aos="fade-up" data-aos-delay="150">
               멋쟁이사자처럼의 대규모 행사
               (OT, 해커톤, 컨퍼런스 등)에 
               홍보 및 연사로 참여 기회
             </p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <div class="img_wrapper"></div>
+            <div class="img_bg float_r" data-aos="fade-up"></div>
           </div>
         </li>
         <li class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="img_wrapper"></div>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <p class="float_r">
-                멋쟁이사자처럼 
-                교육 프로그램의 
-                한 파트로 참여 가능
+          <div class="col-xs-12 col-md-12 float_container">
+            <p class="float_r" data-aos="fade-up" data-aos-delay="150">
+              멋쟁이사자처럼 
+              교육 프로그램의 
+              한 파트로 참여 가능
             </p>
+            <div class="img_bg float_l" data-aos="fade-up"></div>
           </div>
         </li>
         <li class="row">
-          <div class="col-xs-12 col-md-6">
-            <p class="float_l">
-                멋쟁이사자처럼 학생들 대상
-                자체 행사 주최 가능
+          <div class="col-xs-12 col-md-12 float_container">
+            <p class="float_l" data-aos="fade-up" data-aos-delay="150">
+              멋쟁이사자처럼 학생들 대상
+              자체 행사 주최 가능
             </p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <div class="img_wrapper">
+            <div class="img_bg float_r" data-aos="fade-up">
             </div>
           </div>
         </li>
@@ -133,7 +119,7 @@
       <div class="container section">
         <div class="row">
           <div class="col-md-12" data-aos="fade-up">
-            <h3 class="text-center">기타 사업제휴</h3>
+            <h4 class="text-center">기타 사업제휴</h4>
           </div>
         </div>
       </div>
@@ -164,7 +150,7 @@
       <div class="section container">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="text-center">멋쟁이 사자처럼과<br>함께하기</h3>
+            <h4 class="text-center">멋쟁이 사자처럼과<br>함께하기</h4>
             <a href="./blog.html" class="btn_line l_mt text-center">파트너쉽 및 제휴 요청하기</a>
           </div>
         </div>
@@ -192,7 +178,46 @@
         </div>
       </div>
     </footer>
-    
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">파트너쉽 및 제휴 요청하기</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="modal_close()">
+              <ion-icon name="close"></ion-icon>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="input_wrapper">
+                <label for="" class="readable-hidden">이름</label>
+                <input type="text" placeholder="이름">
+              </div>
+              <div class="input_wrapper">
+                <label for="" class="readable-hidden">이메일</label>
+                <input type="text" placeholder="이메일">
+              </div>
+              <div class="input_wrapper">
+                <label for="" class="readable-hidden">연락처</label>
+                <input type="text" placeholder="연락처">
+              </div>
+              <div class="input_wrapper">
+                <label for="" class="readable-hidden">회사</label>
+                <input type="text" placeholder="회사">
+              </div>
+              <div class="input_wrapper">
+                <label for="" class="readable-hidden">제안내용</label>
+                <textarea name="" id="" cols="30" rows="6" placeholder="제안내용"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-primary">전송하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="./js/main.js"></script>
   <script>
